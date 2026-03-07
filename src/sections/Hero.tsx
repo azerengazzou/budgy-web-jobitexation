@@ -1,6 +1,6 @@
 import { Download, ArrowRight, Shield } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import PhoneMockup from '../components/PhoneMockup';
+import PhoneShowcase from '../components/PhoneShowcase';
 import SectionBackground from '../components/SectionBackground';
 
 export default function Hero() {
@@ -70,30 +70,7 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right: Phone Mockups */}
-          <div className="relative animate-fade-in-up animation-delay-400 flex justify-center items-center mt-8 lg:mt-0">
-            <div className="transform -rotate-12 hover:scale-90 transition-transform duration-300 scale-75 opacity-80">
-              <img 
-                src="/phone-2.png" 
-                alt="Budget App" 
-                className="w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] md:w-[280px] md:h-[560px] lg:w-[300px] lg:h-[600px] object-contain drop-shadow-2xl"
-              />
-            </div>
-            <div className="transform rotate-0 hover:scale-105 transition-transform duration-300 -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 z-10">
-              <img 
-                src="/phone-2.png" 
-                alt="Budget App" 
-                className="w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] md:w-[280px] md:h-[560px] lg:w-[300px] lg:h-[600px] object-contain drop-shadow-2xl"
-              />
-            </div>
-            <div className="transform rotate-12 hover:scale-90 transition-transform duration-300 scale-75 opacity-80">
-              <img 
-                src="/phone-2.png" 
-                alt="Budget App" 
-                className="w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] md:w-[280px] md:h-[560px] lg:w-[300px] lg:h-[600px] object-contain drop-shadow-2xl"
-              />
-            </div>
-          </div>
+          <PhoneShowcase />
         </div>
       </div>
     </section>

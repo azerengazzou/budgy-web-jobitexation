@@ -20,6 +20,14 @@ export const translations = {
       cta: 'Download Free APK',
       ctaSecondary: 'Learn More',
       trustBadge: 'Trusted by 10,000+ users in Tunisia, Algeria, Morocco & Europe',
+      notifications: {
+        budgetSaved: '💰 Budget saved!',
+        budgetSavedDesc: '+$250 this month',
+        goalReached: '✓ Goal reached',
+        goalReachedDesc: 'Vacation fund',
+        spendingAlert: '📊 Spending alert',
+        spendingAlertDesc: '80% of budget used',
+      },
     },
     problem: {
       title: 'Struggling to Manage Your Money?',
@@ -199,6 +207,14 @@ export const translations = {
       cta: 'Télécharger APK Gratuit',
       ctaSecondary: 'En Savoir Plus',
       trustBadge: 'Approuvé par plus de 10 000 utilisateurs en Tunisie, Algérie, Maroc et Europe',
+      notifications: {
+        budgetSaved: '💰 Budget économisé!',
+        budgetSavedDesc: '+250$ ce mois',
+        goalReached: '✓ Objectif atteint',
+        goalReachedDesc: 'Fonds vacances',
+        spendingAlert: '📊 Alerte dépenses',
+        spendingAlertDesc: '80% du budget utilisé',
+      },
     },
     problem: {
       title: 'Difficultés à Gérer Votre Argent?',
@@ -378,6 +394,14 @@ export const translations = {
       cta: 'تحميل APK مجاني',
       ctaSecondary: 'اعرف المزيد',
       trustBadge: 'موثوق به من قبل أكثر من 10,000 مستخدم في تونس والجزائر والمغرب وأوروبا',
+      notifications: {
+        budgetSaved: '💰 تم توفير الميزانية!',
+        budgetSavedDesc: '+250$ هذا الشهر',
+        goalReached: '✓ تم تحقيق الهدف',
+        goalReachedDesc: 'صندوق العطلة',
+        spendingAlert: '📊 تنبيه الإنفاق',
+        spendingAlertDesc: '80% من الميزانية مستخدمة',
+      },
     },
     problem: {
       title: 'تواجه صعوبة في إدارة أموالك؟',
