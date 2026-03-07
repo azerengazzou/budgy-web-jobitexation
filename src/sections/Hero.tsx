@@ -78,17 +78,15 @@ export default function Hero() {
                 alt="Budget App" 
                 className="w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] md:w-[280px] md:h-[560px] lg:w-[300px] lg:h-[600px] object-contain drop-shadow-2xl"
               />
-
             </div>
-            <div className="transform rotate-0 hover:scale-105 transition-transform duration-300 -ml-6 sm:-ml-8 md:-ml-12 lg:-ml-16 z-10">
+            <div className="transform rotate-0 hover:scale-105 transition-transform duration-300 -mx-6 sm:-mx-8 md:-mx-12 lg:-mx-16 z-10">
               <img 
                 src="/phone-2.png" 
                 alt="Budget App" 
                 className="w-[200px] h-[400px] sm:w-[240px] sm:h-[480px] md:w-[280px] md:h-[560px] lg:w-[300px] lg:h-[600px] object-contain drop-shadow-2xl"
               />
-
             </div>
-            <div className="transform rotate-12 hover:scale-90 transition-transform duration-300 -ml-6 sm:-ml-8 md:-ml-12 lg:-ml-16 scale-75 opacity-80">
+            <div className="transform rotate-12 hover:scale-90 transition-transform duration-300 scale-75 opacity-80">
               <img 
                 src="/phone-2.png" 
                 alt="Budget App" 
