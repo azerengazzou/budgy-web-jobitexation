@@ -1,8 +1,14 @@
 import { Check, Download, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SectionBackground from '../components/SectionBackground';
 
 export default function Pricing() {
   const { t } = useLanguage();
+
+  const floatingIcons = [
+    { Icon: Sparkles, position: 'top-[20%] left-[5%]', size: 'w-24 h-24' },
+    { Icon: Download, position: 'bottom-[25%] right-[10%]', size: 'w-28 h-28' },
+  ];
 
   const scrollToDownload = () => {
     const element = document.getElementById('download');
@@ -10,19 +16,21 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="pricing" className="relative py-20 px-4 overflow-hidden">
+      <SectionBackground icons={floatingIcons} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t.pricing.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             {t.pricing.subtitle}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white rounded-3xl p-8 shadow-lg border-2 border-gray-200 hover:border-gray-300 transition-all">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-white/20 hover:border-white/40 transition-all">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-gray-900 mb-2">
                 {t.pricing.free.name}
@@ -54,7 +62,7 @@ export default function Pricing() {
             </button>
           </div>
 
-          <div className="relative bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 shadow-2xl border-2 border-blue-500 transform hover:scale-105 transition-all">
+          <div className="relative bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 shadow-2xl border-2 border-blue-400/50 transform hover:scale-105 transition-all">
             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-yellow-400 text-gray-900 px-6 py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-lg">
               <Sparkles className="w-4 h-4" />
               {t.pricing.popular}

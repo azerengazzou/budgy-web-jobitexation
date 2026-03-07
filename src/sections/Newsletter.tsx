@@ -1,11 +1,17 @@
 import { useState } from 'react';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SectionBackground from '../components/SectionBackground';
 
 export default function Newsletter() {
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const floatingIcons = [
+    { Icon: Mail, position: 'top-[20%] left-[10%]', size: 'w-24 h-24' },
+    { Icon: Send, position: 'bottom-[15%] right-[8%]', size: 'w-28 h-28' },
+  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,9 +30,11 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-blue-600 via-blue-700 to-purple-700">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
+    <section className="relative py-20 px-4 overflow-hidden">
+      <SectionBackground icons={floatingIcons} />
+
+      <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="inline-block p-4 bg-white/20 rounded-full mb-6">
           <Mail className="w-12 h-12 text-white" />
         </div>
 
@@ -34,7 +42,7 @@ export default function Newsletter() {
           {t.newsletter.title}
         </h2>
 
-        <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
           {t.newsletter.subtitle}
         </p>
 

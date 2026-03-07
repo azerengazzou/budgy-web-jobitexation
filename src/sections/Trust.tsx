@@ -1,19 +1,28 @@
 import { Shield, Lock, RefreshCw, Headphones, Download, Smartphone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SectionBackground from '../components/SectionBackground';
 
 export default function Trust() {
   const { t } = useLanguage();
 
   const icons = [Shield, Lock, RefreshCw, Headphones];
 
+  const floatingIcons = [
+    { Icon: Shield, position: 'top-[10%] right-[8%]', size: 'w-28 h-28' },
+    { Icon: Lock, position: 'bottom-[15%] left-[10%]', size: 'w-24 h-24' },
+    { Icon: Download, position: 'top-[45%] left-[5%]', size: 'w-20 h-20' },
+  ];
+
   return (
-    <section id="download" className="py-20 px-4 bg-gradient-to-br from-blue-50 via-purple-50 to-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="download" className="relative py-20 px-4 overflow-hidden">
+      <SectionBackground icons={floatingIcons} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t.trust.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             {t.trust.subtitle}
           </p>
         </div>
@@ -24,7 +33,7 @@ export default function Trust() {
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all border border-gray-100"
+                className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-white/20"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-green-600" />
@@ -41,7 +50,7 @@ export default function Trust() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white rounded-3xl p-8 shadow-lg border border-gray-200">
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/20">
             <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
               <Download className="w-7 h-7 text-blue-600" />
             </div>
@@ -53,7 +62,7 @@ export default function Trust() {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 shadow-lg text-white">
+          <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-8 shadow-lg text-white border border-blue-400/50">
             <div className="w-14 h-14 bg-white/20 rounded-2xl flex items-center justify-center mb-6">
               <Smartphone className="w-7 h-7 text-white" />
             </div>

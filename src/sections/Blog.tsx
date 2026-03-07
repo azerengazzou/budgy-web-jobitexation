@@ -1,19 +1,27 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts } from '../i18n/translations';
+import SectionBackground from '../components/SectionBackground';
 
 export default function Blog() {
   const { t, language } = useLanguage();
   const posts = blogPosts[language];
 
+  const floatingIcons = [
+    { Icon: Calendar, position: 'top-[15%] left-[8%]', size: 'w-24 h-24' },
+    { Icon: Clock, position: 'bottom-[20%] right-[12%]', size: 'w-28 h-28' },
+  ];
+
   return (
-    <section id="blog" className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="blog" className="relative py-20 px-4 overflow-hidden">
+      <SectionBackground icons={floatingIcons} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t.blog.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             {t.blog.subtitle}
           </p>
         </div>
@@ -22,7 +30,7 @@ export default function Blog() {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200"
+              className="group bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40"
             >
               <div className="relative overflow-hidden">
                 <img

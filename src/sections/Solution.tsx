@@ -1,19 +1,28 @@
 import { TrendingUp, Target, PiggyBank, Coins, Wifi, Lock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import SectionBackground from '../components/SectionBackground';
 
 export default function Solution() {
   const { t } = useLanguage();
 
   const icons = [TrendingUp, Target, PiggyBank, Coins, Wifi, Lock];
 
+  const floatingIcons = [
+    { Icon: TrendingUp, position: 'top-[10%] right-[10%]', size: 'w-28 h-28' },
+    { Icon: PiggyBank, position: 'bottom-[15%] left-[8%]', size: 'w-24 h-24' },
+    { Icon: Lock, position: 'top-[50%] right-[5%]', size: 'w-20 h-20' },
+  ];
+
   return (
-    <section id="features" className="py-20 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section id="features" className="relative py-20 px-4 overflow-hidden">
+      <SectionBackground icons={floatingIcons} />
+
+      <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {t.solution.title}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
             {t.solution.subtitle}
           </p>
         </div>
@@ -24,7 +33,7 @@ export default function Solution() {
             return (
               <div
                 key={index}
-                className="group relative bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:-translate-y-1"
+                className="group relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:-translate-y-1"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                   <Icon className="w-8 h-8 text-white" />
