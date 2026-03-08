@@ -1,7 +1,8 @@
-import { Download, ArrowRight, Shield } from 'lucide-react';
+import { Download, ArrowRight, Shield, TrendingUp, DollarSign, PiggyBank, Wallet } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import PhoneShowcase from '../components/PhoneShowcase';
 import SectionBackground from '../components/SectionBackground';
+import { heroStyles } from '../styles/heroStyles';
 
 export default function Hero() {
   const { t } = useLanguage();
@@ -19,51 +20,51 @@ export default function Hero() {
   const floatingIcons = [
     { Icon: Shield, position: 'top-[20%] left-[10%]', size: 'w-24 h-24' },
     { Icon: Download, position: 'bottom-[25%] right-[8%]', size: 'w-28 h-28' },
-  ];
+    { Icon: TrendingUp, position: 'top-[60%] left-[5%]', size: 'w-20 h-20' },
+    { Icon: DollarSign, position: 'top-[35%] right-[15%]', size: 'w-32 h-32' },
+    { Icon: PiggyBank, position: 'bottom-[10%] left-[20%]', size: 'w-24 h-24' },
+    { Icon: Wallet, position: 'top-[10%] right-[5%]', size: 'w-20 h-20' },
+  ]; 
 
   return (
-    <section className="relative pt-20 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 overflow-hidden">
+    <section className={heroStyles.sectionClasses}>
+      {/* Animated gradient orbs */}
+      <div className="absolute top-20 right-10 sm:right-20 w-48 h-48 sm:w-72 sm:h-72 bg-[#3B82F6]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-50 animate-blob" />
+      <div className="absolute top-40 left-10 sm:left-20 w-48 h-48 sm:w-72 sm:h-72 bg-[#8B5CF6]/20 rounded-full mix-blend-overlay filter blur-3xl opacity-50 animate-blob animation-delay-2000" />
+      <div className="absolute bottom-20 left-1/2 w-48 h-48 sm:w-72 sm:h-72 bg-[#10B981]/10 rounded-full mix-blend-overlay filter blur-3xl opacity-40 animate-blob animation-delay-4000" />
+      
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+      
       <SectionBackground icons={floatingIcons} />
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left: Content */}
           <div className="animate-fade-in-up text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 bg-white/90 backdrop-blur-sm text-blue-700 px-3 sm:px-4 py-2 rounded-full mb-4 sm:mb-6 shadow-lg">
+            <div className={heroStyles.badgeClasses}>
               <Shield className="w-4 h-4" />
               <span className="text-xs sm:text-sm font-medium">{t.hero.badge}</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight drop-shadow-lg">
-              {t.hero.title}
-            </h1>
-
-            <p className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed">
-              {t.hero.subtitle}
-            </p>
+            <h1 className={heroStyles.titleClasses}>{t.hero.title}</h1>
+            <p className={heroStyles.subtitleClasses}>{t.hero.subtitle}</p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
-              <button
-                onClick={scrollToDownload}
-                className="group bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:from-blue-700 hover:to-blue-800 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 flex items-center justify-center gap-2"
-              >
+              <button onClick={scrollToDownload} className={heroStyles.primaryBtnClasses}>
                 <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                 {t.hero.cta}
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
-
-              <button
-                onClick={scrollToFeatures}
-                className="bg-white/90 backdrop-blur-sm text-gray-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold hover:bg-white transition-all shadow-md hover:shadow-lg border border-white/50"
-              >
+              <button onClick={scrollToFeatures} className={heroStyles.secondaryBtnClasses}>
                 {t.hero.ctaSecondary}
               </button>
             </div>
 
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-blue-100 justify-center lg:justify-start">
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-[#D1D5DB] justify-center lg:justify-start">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-blue-400 to-purple-400 border-2 border-white/50" />
+                  <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] border-2 border-gray-800" />
                 ))}
               </div>
               <span>{t.hero.trustBadge}</span>
