@@ -171,7 +171,7 @@ export const translations = {
       error: 'Please enter a valid email address.',
     },
     footer: {
-      tagline: 'Smart budgeting for North Africa and Europe',
+      tagline: 'Smart budgeting',
       product: 'Product',
       features: 'Features',
       pricing: 'Pricing',
@@ -358,7 +358,7 @@ export const translations = {
       error: 'Veuillez entrer une adresse email valide.',
     },
     footer: {
-      tagline: 'Budget intelligent pour l\'Afrique du Nord et l\'Europe',
+      tagline: 'Budget intelligent',
       product: 'Produit',
       features: 'Fonctionnalités',
       pricing: 'Tarifs',
@@ -545,7 +545,7 @@ export const translations = {
       error: 'الرجاء إدخال عنوان بريد إلكتروني صالح.',
     },
     footer: {
-      tagline: 'ميزانية ذكية لشمال أفريقيا وأوروبا',
+      tagline: 'ميزانية ذكية',
       product: 'المنتج',
       features: 'المميزات',
       pricing: 'الأسعار',

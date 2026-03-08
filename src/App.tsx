@@ -12,7 +12,7 @@ import Footer from './sections/Footer';
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-gradient-to-br from-[#0A2540] via-[#1e3a5f] to-[#4A90E2]">
+      <div className="min-h-screen bg-gradient-to-br from-[#81A6C6] via-[#AACDDC] to-[#AACDDC]">
         <Navigation />
         <main>
           <Hero />

@@ -38,11 +38,11 @@ export default function Newsletter() {
           <Mail className="w-12 h-12 text-white" />
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-[#0F2854] mb-4">
           {t.newsletter.title}
         </h2>
 
-        <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-[#1C4D8D] mb-10 max-w-2xl mx-auto">
           {t.newsletter.subtitle}
         </p>
 
@@ -55,7 +55,7 @@ export default function Newsletter() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.newsletter.placeholder}
-                className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-transparent focus:border-blue-400 focus:outline-none text-gray-900 text-lg"
+                className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-transparent focus:border-blue-400 focus:outline-none text-[#0F2854] text-lg"
                 required
               />
             </div>

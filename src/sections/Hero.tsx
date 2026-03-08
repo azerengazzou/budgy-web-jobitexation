@@ -43,8 +43,8 @@ export default function Hero() {
           {/* Left: Content */}
           <div className="animate-fade-in-up text-center lg:text-left">
             <div className={heroStyles.badgeClasses}>
-              <Shield className="w-4 h-4" />
-              <span className="text-xs sm:text-sm font-medium">{t.hero.badge}</span>
+              <Shield className="w-4 h-4   text-[#0F2854]" />
+              <span className="text-xs sm:text-sm text-[#0F2854] font-medium">{t.hero.badge}</span>
             </div>
 
             <h1 className={heroStyles.titleClasses}>{t.hero.title}</h1>
@@ -67,7 +67,7 @@ export default function Hero() {
                   <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] border-2 border-gray-800" />
                 ))}
               </div>
-              <span>{t.hero.trustBadge}</span>
+              <span className="text-[#0F2854]">{t.hero.trustBadge}</span>
             </div>
           </div>
 

@@ -18,10 +18,10 @@ export default function Blog() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F2854] mb-4">
             {t.blog.title}
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-[#1C4D8D] max-w-3xl mx-auto">
             {t.blog.subtitle}
           </p>
         </div>
@@ -46,7 +46,7 @@ export default function Blog() {
               </div>
 
               <div className="p-6">
-                <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
+                <div className="flex items-center gap-4 text-sm text-[#4988C4] mb-3">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     <span>{new Date(post.date).toLocaleDateString(language)}</span>
@@ -57,11 +57,11 @@ export default function Blog() {
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-[#0F2854] mb-3 group-hover:text-blue-600 transition-colors">
                   {post.title}
                 </h3>
 
-                <p className="text-gray-600 mb-4 line-clamp-2">
+                <p className="text-[#1C4D8D] mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
 

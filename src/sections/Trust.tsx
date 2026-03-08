@@ -19,10 +19,10 @@ export default function Trust() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F2854] mb-4">
             {t.trust.title}
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-[#1C4D8D] max-w-3xl mx-auto">
             {t.trust.subtitle}
           </p>
         </div>
@@ -38,10 +38,10 @@ export default function Trust() {
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-green-600" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">
+                <h3 className="text-lg font-bold text-[#0F2854] mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-[#1C4D8D]">
                   {feature.description}
                 </p>
               </div>
@@ -54,10 +54,10 @@ export default function Trust() {
             <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
               <Download className="w-7 h-7 text-blue-600" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            <h3 className="text-2xl font-bold text-[#0F2854] mb-4">
               {t.trust.whyApk.title}
             </h3>
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-[#1C4D8D] leading-relaxed">
               {t.trust.whyApk.description}
             </p>
           </div>

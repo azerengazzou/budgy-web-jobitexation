@@ -21,10 +21,10 @@ export default function Pricing() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0F2854] mb-4">
             {t.pricing.title}
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+          <p className="text-xl text-[#1C4D8D] max-w-3xl mx-auto">
             {t.pricing.subtitle}
           </p>
         </div>
@@ -32,14 +32,14 @@ export default function Pricing() {
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-white/20 hover:border-white/40 transition-all">
             <div className="mb-6">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-bold text-[#0F2854] mb-2">
                 {t.pricing.free.name}
               </h3>
               <div className="flex items-baseline gap-2">
-                <span className="text-5xl font-bold text-gray-900">{t.pricing.free.price}</span>
-                <span className="text-gray-600">{t.pricing.currency}</span>
+                <span className="text-5xl font-bold text-[#0F2854]">{t.pricing.free.price}</span>
+                <span className="text-[#4988C4]">{t.pricing.currency}</span>
               </div>
-              <p className="text-gray-600 mt-2">{t.pricing.free.period}</p>
+              <p className="text-[#1C4D8D] mt-2">{t.pricing.free.period}</p>
             </div>
 
             <ul className="space-y-4 mb-8">
@@ -48,7 +48,7 @@ export default function Pricing() {
                   <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                     <Check className="w-3 h-3 text-green-600" />
                   </div>
-                  <span className="text-gray-700">{feature}</span>
+                  <span className="text-[#1C4D8D]">{feature}</span>
                 </li>
               ))}
             </ul>
