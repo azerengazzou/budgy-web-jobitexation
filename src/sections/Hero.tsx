@@ -38,10 +38,9 @@ export default function Hero() {
       
       <SectionBackground icons={floatingIcons} />
 
-      <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left: Content */}
-          <div className="animate-fade-in-up text-center lg:text-left">
+      <div className="max-w-4xl mx-auto relative z-10">
+        <div className="flex flex-col items-center">
+          <div className="animate-fade-in-up text-center">
             <div className={heroStyles.badgeClasses}>
               <Shield className="w-4 h-4   text-[#0F2854]" />
               <span className="text-xs sm:text-sm text-[#0F2854] font-medium">{t.hero.badge}</span>
@@ -50,7 +49,7 @@ export default function Hero() {
             <h1 className={heroStyles.titleClasses}>{t.hero.title}</h1>
             <p className={heroStyles.subtitleClasses}>{t.hero.subtitle}</p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center">
               <button onClick={scrollToDownload} className={heroStyles.primaryBtnClasses}>
                 <Download className="w-4 h-4 sm:w-5 sm:h-5" />
                 {t.hero.cta}
@@ -61,7 +60,7 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-[#D1D5DB] justify-center lg:justify-start">
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-[#D1D5DB] justify-center">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] border-2 border-gray-800" />
