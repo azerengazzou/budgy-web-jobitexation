@@ -35,16 +35,19 @@ export default function Navigation() {
           </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-8">
-            <button onClick={() => scrollToSection('features')} className="text-gray-700 hover:text-blue-600 transition-colors">
+          <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+            <button onClick={() => scrollToSection('features')} className="text-gray-700 hover:text-blue-600 transition-colors font-bold">
               {t.nav.features}
             </button>
-            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection('pricing')} className="text-gray-700 hover:text-blue-600 transition-colors font-bold">
               {t.nav.pricing}
             </button>
-            <button onClick={() => scrollToSection('blog')} className="text-gray-700 hover:text-blue-600 transition-colors">
+            <button onClick={() => scrollToSection('blog')} className="text-gray-700 hover:text-blue-600 transition-colors font-bold">
               {t.nav.blog}
             </button>
+          </div>
+
+          <div className="hidden md:flex items-center gap-4">
 
             <div className="relative">
               <button
@@ -95,13 +98,13 @@ export default function Navigation() {
       {isOpen && (
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-4 space-y-3">
-            <button onClick={() => scrollToSection('features')} className="block w-full text-left py-2 text-gray-700">
+            <button onClick={() => scrollToSection('features')} className="block w-full text-center py-2 text-gray-700 font-bold">
               {t.nav.features}
             </button>
-            <button onClick={() => scrollToSection('pricing')} className="block w-full text-left py-2 text-gray-700">
+            <button onClick={() => scrollToSection('pricing')} className="block w-full text-center py-2 text-gray-700 font-bold">
               {t.nav.pricing}
             </button>
-            <button onClick={() => scrollToSection('blog')} className="block w-full text-left py-2 text-gray-700">
+            <button onClick={() => scrollToSection('blog')} className="block w-full text-center py-2 text-gray-700 font-bold">
               {t.nav.blog}
             </button>
 
