@@ -8,12 +8,14 @@ import Trust from './sections/Trust';
 import Blog from './sections/Blog';
 import Newsletter from './sections/Newsletter';
 import Footer from './sections/Footer';
+import PageLayout from './styles/pageLayout';
 
 function App() {
   return (
     <LanguageProvider>
-      <div className="min-h-screen bg-gradient-to-br from-[#81A6C6] via-[#AACDDC] to-[#AACDDC]">
+      <PageLayout>
         <Navigation />
+
         <main>
           <HeroNew />
           <Problem />
@@ -23,8 +25,9 @@ function App() {
           <Blog />
           <Newsletter />
         </main>
+
         <Footer />
-      </div>
+      </PageLayout>
     </LanguageProvider>
   );
 }

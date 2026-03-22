@@ -1,20 +1,13 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { blogPosts } from '../i18n/translations';
-import SectionBackground from '../components/SectionBackground';
 
 export default function Blog() {
   const { t, language } = useLanguage();
   const posts = blogPosts[language];
 
-  const floatingIcons = [
-    { Icon: Calendar, position: 'top-[15%] left-[8%]', size: 'w-24 h-24' },
-    { Icon: Clock, position: 'bottom-[20%] right-[12%]', size: 'w-28 h-28' },
-  ];
-
   return (
-    <section id="blog" className="relative py-20 px-4 overflow-hidden">
-      <SectionBackground icons={floatingIcons} />
+    <section id="blog" className="relative py-20 px-4 overflow-hidden bg-slate-50">
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
@@ -30,7 +23,7 @@ export default function Blog() {
           {posts.map((post) => (
             <article
               key={post.id}
-              className="group bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:border-white/40"
+              className="group bg-white backdrop-blur-sm rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-slate-300"
             >
               <div className="relative overflow-hidden">
                 <img

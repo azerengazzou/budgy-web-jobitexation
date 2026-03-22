@@ -5,7 +5,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-[#0A2540]/95 backdrop-blur-sm text-gray-300 py-12 px-4 border-t border-white/10 overflow-hidden">
+    <footer className="relative bg-slate-900 text-gray-300 py-12 px-4 border-t border-slate-800 overflow-hidden">
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
@@ -15,7 +15,7 @@ export default function Footer() {
 
               <span className="text-xl font-bold text-white">Budgy</span>
             </div>
-            <p className="text-sm text-[#4988C4]">
+            <p className="text-sm text-slate-400">
               {t.footer.tagline}
             </p>
           </div>
@@ -24,17 +24,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">{t.footer.product}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#features" className="hover:text-blue-400 transition-colors">
+                <a href="#features" className="hover:text-white transition-colors">
                   {t.footer.features}
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="hover:text-blue-400 transition-colors">
+                <a href="#pricing" className="hover:text-white transition-colors">
                   {t.footer.pricing}
                 </a>
               </li>
               <li>
-                <a href="#download" className="hover:text-blue-400 transition-colors">
+                <a href="#download" className="hover:text-white transition-colors">
                   {t.footer.download}
                 </a>
               </li>
@@ -45,17 +45,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">{t.footer.company}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   {t.footer.about}
                 </a>
               </li>
               <li>
-                <a href="#blog" className="hover:text-blue-400 transition-colors">
+                <a href="#blog" className="hover:text-white transition-colors">
                   {t.footer.blog}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   {t.footer.contact}
                 </a>
               </li>
@@ -66,12 +66,12 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">{t.footer.legal}</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   {t.footer.privacy}
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-blue-400 transition-colors">
+                <a href="#" className="hover:text-white transition-colors">
                   {t.footer.terms}
                 </a>
               </li>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-slate-800 pt-8">
           <p className="text-center text-sm text-gray-400">
             © {currentYear} Budgy. {t.footer.rights}
           </p>
