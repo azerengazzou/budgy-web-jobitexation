@@ -1,6 +1,6 @@
 import { LanguageProvider } from './contexts/LanguageContext';
 import Navigation from './components/Navigation';
-import Hero from './sections/Hero';
+import HeroNew from './sections/HeroNew';
 import Problem from './sections/Problem';
 import Solution from './sections/Solution';
 import Pricing from './sections/Pricing';
@@ -15,7 +15,7 @@ function App() {
       <div className="min-h-screen bg-gradient-to-br from-[#81A6C6] via-[#AACDDC] to-[#AACDDC]">
         <Navigation />
         <main>
-          <Hero />
+          <HeroNew />
           <Problem />
           <Solution />
           <Pricing />

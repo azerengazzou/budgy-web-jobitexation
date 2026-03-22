@@ -69,14 +69,14 @@ export default function Hero() {
               </button>
             </div>
 
-            <div className="flex items-center gap-2 text-xs sm:text-sm text-[#D1D5DB] justify-center">
+            {/* <div className="flex items-center gap-2 text-xs sm:text-sm text-[#D1D5DB] justify-center">
               <div className="flex -space-x-2">
                 {[1, 2, 3, 4].map((i) => (
                   <div key={i} className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-br from-[#3B82F6] to-[#8B5CF6] border-2 border-gray-800" />
                 ))}
               </div>
               <span className="text-[#0F2854]">{t.hero.trustBadge}</span>
-            </div>
+            </div> */}
           </div>
 
           <PhoneShowcase />
