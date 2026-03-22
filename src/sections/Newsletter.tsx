@@ -24,7 +24,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700">
+    <section className="relative bg-slate-900 text-gray-300 py-12 px-4 border-t border-slate-800 overflow-hidden">
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
