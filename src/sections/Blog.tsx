@@ -6,11 +6,6 @@ export default function Blog() {
   const { t, language } = useLanguage();
   const posts = blogPosts[language];
 
-  const floatingIcons = [
-    { Icon: Calendar, position: 'top-[15%] left-[8%]', size: 'w-24 h-24' },
-    { Icon: Clock, position: 'bottom-[20%] right-[12%]', size: 'w-28 h-28' },
-  ];
-
   return (
     <section id="blog" className="relative py-20 px-4 overflow-hidden bg-slate-50">
 

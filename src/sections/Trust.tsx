@@ -6,12 +6,6 @@ export default function Trust() {
 
   const icons = [Shield, Lock, RefreshCw, Headphones];
 
-  const floatingIcons = [
-    { Icon: Shield, position: 'top-[10%] right-[8%]', size: 'w-28 h-28' },
-    { Icon: Lock, position: 'bottom-[15%] left-[10%]', size: 'w-24 h-24' },
-    { Icon: Download, position: 'top-[45%] left-[5%]', size: 'w-20 h-20' },
-  ];
-
   return (
     <section id="download" className="relative py-20 px-4 overflow-hidden bg-white">
 

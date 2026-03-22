@@ -7,11 +7,6 @@ export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-  const floatingIcons = [
-    { Icon: Mail, position: 'top-[20%] left-[10%]', size: 'w-24 h-24' },
-    { Icon: Send, position: 'bottom-[15%] right-[8%]', size: 'w-28 h-28' },
-  ];
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 

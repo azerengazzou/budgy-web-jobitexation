@@ -4,11 +4,6 @@ import { useLanguage } from '../contexts/LanguageContext';
 export default function Pricing() {
   const { t } = useLanguage();
 
-  const floatingIcons = [
-    { Icon: Sparkles, position: 'top-[20%] left-[5%]', size: 'w-24 h-24' },
-    { Icon: Download, position: 'bottom-[25%] right-[10%]', size: 'w-28 h-28' },
-  ];
-
   const scrollToDownload = () => {
     const element = document.getElementById('download');
     element?.scrollIntoView({ behavior: 'smooth' });

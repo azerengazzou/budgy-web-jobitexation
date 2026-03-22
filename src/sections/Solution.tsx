@@ -6,12 +6,6 @@ export default function Solution() {
 
   const icons = [TrendingUp, Target, PiggyBank, Coins, Wifi, Lock];
 
-  const floatingIcons = [
-    { Icon: TrendingUp, position: 'top-[10%] right-[10%]', size: 'w-28 h-28' },
-    { Icon: PiggyBank, position: 'bottom-[15%] left-[8%]', size: 'w-24 h-24' },
-    { Icon: Lock, position: 'top-[50%] right-[5%]', size: 'w-20 h-20' },
-  ];
-
   return (
     <section id="features" className="relative py-20 px-4 overflow-hidden bg-white">
 

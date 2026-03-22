@@ -6,13 +6,6 @@ export default function Problem() {
 
   const icons = [AlertCircle, TrendingDown, Settings, Globe];
 
-  const floatingIcons = [
-    { Icon: AlertCircle, position: 'top-[15%] left-[10%]', size: 'w-24 h-24' },
-    { Icon: TrendingDown, position: 'top-[60%] right-[15%]', size: 'w-32 h-32' },
-    { Icon: Settings, position: 'bottom-[20%] left-[20%]', size: 'w-28 h-28' },
-    { Icon: Globe, position: 'top-[40%] right-[8%]', size: 'w-20 h-20' },
-  ];
-
   return (
     <section className="relative py-20 px-4 overflow-hidden bg-slate-50">
       <div className="max-w-7xl mx-auto relative z-10">
