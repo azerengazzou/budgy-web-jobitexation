@@ -1,6 +1,5 @@
 import { Shield, Lock, RefreshCw, Headphones, Download, Smartphone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import SectionBackground from '../components/SectionBackground';
 
 export default function Trust() {
   const { t } = useLanguage();
@@ -14,8 +13,7 @@ export default function Trust() {
   ];
 
   return (
-    <section id="download" className="relative py-20 px-4 overflow-hidden">
-      <SectionBackground icons={floatingIcons} />
+    <section id="download" className="relative py-20 px-4 overflow-hidden bg-white">
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
@@ -33,7 +31,7 @@ export default function Trust() {
             return (
               <div
                 key={index}
-                className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-white/20"
+                className="bg-white backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all border border-slate-200"
               >
                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 text-green-600" />
@@ -50,7 +48,7 @@ export default function Trust() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-white/20">
+          <div className="bg-white backdrop-blur-sm rounded-3xl p-8 shadow-lg border border-slate-200">
             <div className="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
               <Download className="w-7 h-7 text-blue-600" />
             </div>

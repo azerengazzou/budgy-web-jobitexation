@@ -1,6 +1,5 @@
 import { TrendingUp, Target, PiggyBank, Coins, Wifi, Lock } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import SectionBackground from '../components/SectionBackground';
 
 export default function Solution() {
   const { t } = useLanguage();
@@ -14,8 +13,7 @@ export default function Solution() {
   ];
 
   return (
-    <section id="features" className="relative py-20 px-4 overflow-hidden">
-      <SectionBackground icons={floatingIcons} />
+    <section id="features" className="relative py-20 px-4 overflow-hidden bg-white">
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
@@ -33,7 +31,7 @@ export default function Solution() {
             return (
               <div
                 key={index}
-                className="group relative bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-white/20 hover:-translate-y-1"
+                className="group relative bg-white backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:-translate-y-1"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
                   <Icon className="w-8 h-8 text-white" />

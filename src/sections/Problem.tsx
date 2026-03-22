@@ -1,6 +1,5 @@
 import { AlertCircle, TrendingDown, Settings, Globe } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import SectionBackground from '../components/SectionBackground';
 
 export default function Problem() {
   const { t } = useLanguage();
@@ -15,9 +14,7 @@ export default function Problem() {
   ];
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
-      <SectionBackground icons={floatingIcons} />
-
+    <section className="relative py-20 px-4 overflow-hidden bg-slate-50">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-[#0F2854] mb-4">
@@ -34,7 +31,7 @@ export default function Problem() {
             return (
               <div
                 key={index}
-                className="group bg-[#F7F8F0] backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border border-white/20"
+                className="group bg-white backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 border border-slate-200"
               >
                 <div className="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon className="w-7 h-7 text-red-600" />
