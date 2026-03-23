@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, ReactNode } from 'react';
 import { Language } from '../types';
 import { translations } from '../i18n/translations';
 
@@ -19,13 +19,13 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     setIsLoading(true);
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    
+
     // Preload images
     const imagesToPreload = [
       '/icon-2.png',
       '/phone-budgy.png'
     ];
-    
+
     const preloadPromises = imagesToPreload.map(src => {
       return new Promise((resolve, reject) => {
         const img = new Image();
@@ -34,7 +34,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         img.src = src;
       });
     });
-    
+
     Promise.all(preloadPromises).then(() => {
       setTimeout(() => {
         setLanguageState(lang);
