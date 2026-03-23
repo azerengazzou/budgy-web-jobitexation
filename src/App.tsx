@@ -20,7 +20,7 @@ function App() {
           <HeroNew />
           <Problem />
           <Solution />
-          <Pricing />
+          {/* <Pricing /> */}
           <Trust />
           <Blog />
           <Newsletter />
