@@ -7,7 +7,7 @@ export default function Blog() {
   const posts = blogPosts[language];
 
   return (
-    <section id="blog" className="relative py-20 px-4 overflow-hidden bg-slate-50">
+    <section id="blog" className="relative py-20 px-4 overflow-hidden bg-white">
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
