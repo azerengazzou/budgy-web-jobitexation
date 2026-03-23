@@ -1,4 +1,9 @@
-import { AlertCircle, TrendingDown, Settings, Globe } from 'lucide-react';
+import {
+  AlertCircle,
+  TrendingDown,
+  Settings,
+  Globe,
+} from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Problem() {
@@ -18,9 +23,10 @@ export default function Problem() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {t.problem.problems.map((problem, index) => {
-            const Icon = icons[index];
+            const Icon = icons[index % icons.length];
+
             return (
               <div
                 key={index}
@@ -29,9 +35,11 @@ export default function Problem() {
                 <div className="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                   <Icon className="w-7 h-7 text-red-600" />
                 </div>
+
                 <h3 className="text-2xl font-bold text-[#0F2854] mb-3">
                   {problem.title}
                 </h3>
+
                 <p className="text-[#1C4D8D] leading-relaxed">
                   {problem.description}
                 </p>
