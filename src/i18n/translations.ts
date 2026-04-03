@@ -35,19 +35,35 @@ export const translations = {
       problems: [
         {
           title: 'Lost Track of Spending',
-          description: 'Money disappears and you don\'t know where it went',
+          description: "You don't clearly see where your money goes",
         },
         {
           title: 'No Savings Plan',
-          description: 'Living paycheck to paycheck with no emergency fund',
+          description: 'Saving feels unstructured and inconsistent',
         },
         {
-          title: 'Complex Apps',
-          description: 'Budgeting apps that are too complicated or not localized',
+          title: 'Unexpected Expenses',
+          description: 'Sudden costs disrupt your financial stability',
         },
         {
-          title: 'No Regional Support',
-          description: 'Tools that don\'t support TND or understand North African needs',
+          title: 'No Clear Budget',
+          description: "You lack clear limits for your spending",
+        },
+        {
+          title: 'Impulse Spending',
+          description: 'Unplanned purchases quickly add up',
+        },
+        {
+          title: 'Debt Pressure',
+          description: 'Loans and bills create constant stress',
+        },
+        {
+          title: 'Manual Tracking',
+          description: 'Tracking expenses manually is tedious',
+        },
+        {
+          title: 'Complex Tools',
+          description: 'Apps are too complicated to use daily',
         },
       ],
     },
@@ -57,27 +73,35 @@ export const translations = {
       features: [
         {
           title: 'Smart Expense Tracking',
-          description: 'Automatically categorize and track every dinar you spend with intelligent insights',
+          description: 'Automatically see where your money goes with clear insights',
         },
         {
-          title: 'Budget Planning',
-          description: 'Set realistic budgets for different categories and get alerts when you\'re close to limits',
+          title: 'Structured Savings Plans',
+          description: 'Build consistent saving habits with clear, actionable goals',
         },
         {
-          title: 'Savings Goals',
-          description: 'Create and track multiple savings goals with visual progress and milestone celebrations',
+          title: 'Emergency Expense Control',
+          description: 'Stay prepared with smart alerts for unexpected costs',
         },
         {
-          title: 'Multi-Currency Support',
-          description: 'Full support for TND, EUR, and other currencies with real-time conversion',
+          title: 'Clear Budget Management',
+          description: 'Set simple spending limits and stay in control of your money',
         },
         {
-          title: 'Offline Mode',
-          description: 'Track your expenses even without internet connection. Data syncs when online',
+          title: 'Spending Awareness',
+          description: 'Reduce impulse purchases with real-time tracking and insights',
         },
         {
-          title: 'Privacy First',
-          description: 'Your financial data stays on your device. Encrypted and secure',
+          title: 'Debt & Bill Management',
+          description: 'Keep track of payments and reduce financial stress',
+        },
+        {
+          title: 'Effortless Tracking',
+          description: 'Track expenses easily without manual effort or complexity',
+        },
+        {
+          title: 'Simple & Intuitive App',
+          description: 'Enjoy a clean, easy-to-use interface made for daily use',
         },
       ],
     },
@@ -221,20 +245,36 @@ export const translations = {
       subtitle: 'Vous n\'êtes pas seul. La plupart des gens font face à ces défis:',
       problems: [
         {
-          title: 'Perte de Contrôle des Dépenses',
-          description: 'L\'argent disparaît et vous ne savez pas où il est passé',
+          title: 'Perte de suivi des dépenses',
+          description: "Vous ne voyez pas clairement où va votre argent",
         },
         {
-          title: 'Pas de Plan d\'Épargne',
-          description: 'Vivre de salaire en salaire sans fonds d\'urgence',
+          title: "Pas de plan d'épargne",
+          description: "L'épargne est désorganisée et irrégulière",
         },
         {
-          title: 'Applications Complexes',
-          description: 'Des apps de budget trop compliquées ou non localisées',
+          title: 'Dépenses imprévues',
+          description: 'Les dépenses imprévues perturbent votre stabilité financière',
         },
         {
-          title: 'Pas de Support Régional',
-          description: 'Des outils qui ne supportent pas le TND ou les besoins nord-africains',
+          title: 'Absence de budget clair',
+          description: "Vous n'avez pas de limites claires pour vos dépenses",
+        },
+        {
+          title: 'Dépenses impulsives',
+          description: "Les achats non planifiés s’accumulent rapidement",
+        },
+        {
+          title: 'Pression des dettes',
+          description: 'Les crédits et factures créent un stress constant',
+        },
+        {
+          title: 'Suivi manuel',
+          description: 'Suivre ses dépenses manuellement est fastidieux',
+        },
+        {
+          title: 'Outils complexes',
+          description: 'Les applications sont trop compliquées à utiliser au quotidien',
         },
       ],
     },
@@ -243,28 +283,36 @@ export const translations = {
       subtitle: 'Simple, puissant et conçu pour vous',
       features: [
         {
-          title: 'Suivi Intelligent des Dépenses',
-          description: 'Catégorisez et suivez automatiquement chaque dinar dépensé avec des analyses intelligentes',
+          title: 'Suivi intelligent des dépenses',
+          description: 'Voyez clairement où va votre argent grâce à des analyses précises',
         },
         {
-          title: 'Planification Budgétaire',
-          description: 'Définissez des budgets réalistes par catégorie et recevez des alertes proches des limites',
+          title: "Plans d'épargne structurés",
+          description: "Adoptez des habitudes d'épargne claires et régulières",
         },
         {
-          title: 'Objectifs d\'Épargne',
-          description: 'Créez et suivez plusieurs objectifs d\'épargne avec progression visuelle et célébrations',
+          title: 'Gestion des dépenses imprévues',
+          description: 'Restez prêt avec des alertes pour les coûts inattendus',
         },
         {
-          title: 'Support Multi-Devises',
-          description: 'Support complet pour TND, EUR et autres devises avec conversion en temps réel',
+          title: 'Gestion de budget claire',
+          description: 'Définissez des limites simples et gardez le contrôle de vos finances',
         },
         {
-          title: 'Mode Hors Ligne',
-          description: 'Suivez vos dépenses même sans connexion internet. Synchronisation automatique en ligne',
+          title: 'Maîtrise des dépenses',
+          description: 'Réduisez les achats impulsifs grâce au suivi en temps réel',
         },
         {
-          title: 'Confidentialité Prioritaire',
-          description: 'Vos données financières restent sur votre appareil. Cryptées et sécurisées',
+          title: 'Gestion des dettes et factures',
+          description: 'Suivez vos paiements et réduisez le stress financier',
+        },
+        {
+          title: 'Suivi facile',
+          description: 'Suivez vos dépenses sans effort ni complexité',
+        },
+        {
+          title: 'Application simple et intuitive',
+          description: 'Une interface claire conçue pour une utilisation quotidienne',
         },
       ],
     },
@@ -389,8 +437,8 @@ export const translations = {
     },
     hero: {
       badge: 'النسخة التجريبية متاحة',
-      title:'نظم ميزانيتك بذكاء',
-      subtitle:'تطبيق ميزانية ذكي يساعدك على متابعة مصاريفك، تخطيط ميزانيتك، وتحقيق أهدافك المالية بسهولة.',
+      title: 'نظم ميزانيتك بذكاء',
+      subtitle: 'تطبيق ميزانية ذكي يساعدك على متابعة مصاريفك، تخطيط ميزانيتك، وتحقيق أهدافك المالية بسهولة.',
       cta: 'تحميل APK مجاني',
       ctaSecondary: 'اكتشف كيف يعمل',
       trustBadge: 'انضم إلى المستخدمين الأوائل الذين يساهمون في تشكيل مستقبل إدارة الأموال',
@@ -408,20 +456,36 @@ export const translations = {
       subtitle: 'لست وحدك. معظم الناس يواجهون هذه التحديات:',
       problems: [
         {
-          title: 'فقدان السيطرة على النفقات',
-          description: 'الأموال تختفي ولا تعرف أين ذهبت',
+          title: 'فقدان تتبع المصاريف',
+          description: 'لا ترى بوضوح أين تذهب أموالك',
         },
         {
           title: 'لا توجد خطة ادخار',
-          description: 'العيش من راتب إلى راتب دون صندوق طوارئ',
+          description: 'الادخار غير منظم وغير مستقر',
         },
         {
-          title: 'تطبيقات معقدة',
-          description: 'تطبيقات ميزانية معقدة جداً أو غير متوفرة بالعربية',
+          title: 'مصاريف غير متوقعة',
+          description: 'التكاليف المفاجئة تؤثر على استقرارك المالي',
         },
         {
-          title: 'لا يوجد دعم إقليمي',
-          description: 'أدوات لا تدعم الدينار التونسي أو احتياجات شمال أفريقيا',
+          title: 'عدم وجود ميزانية واضحة',
+          description: 'لا توجد حدود واضحة لمصاريفك',
+        },
+        {
+          title: 'الشراء العشوائي',
+          description: 'المشتريات غير المخططة تتراكم بسرعة',
+        },
+        {
+          title: 'ضغط الديون',
+          description: 'القروض والفواتير تسبب ضغطاً مستمراً',
+        },
+        {
+          title: 'تتبع يدوي',
+          description: 'تتبع المصاريف يدوياً أمر متعب',
+        },
+        {
+          title: 'أدوات معقدة',
+          description: 'التطبيقات معقدة للاستخدام اليومي',
         },
       ],
     },
@@ -430,28 +494,36 @@ export const translations = {
       subtitle: 'بسيط، قوي، ومصمم لك',
       features: [
         {
-          title: 'تتبع ذكي للنفقات',
-          description: 'تصنيف وتتبع تلقائي لكل دينار تنفقه مع رؤى ذكية',
+          title: 'تتبع ذكي للمصاريف',
+          description: 'اعرف أين يذهب مالك بوضوح من خلال تحليلات دقيقة',
         },
         {
-          title: 'تخطيط الميزانية',
-          description: 'حدد ميزانيات واقعية لفئات مختلفة واحصل على تنبيهات عند الاقتراب من الحدود',
+          title: 'خطط ادخار منظمة',
+          description: 'ابنِ عادات ادخار منتظمة وفعالة بسهولة',
         },
         {
-          title: 'أهداف الادخار',
-          description: 'أنشئ وتتبع أهداف ادخار متعددة مع تقدم مرئي واحتفالات بالإنجازات',
+          title: 'إدارة المصاريف الطارئة',
+          description: 'كن مستعداً للمفاجآت مع تنبيهات ذكية',
         },
         {
-          title: 'دعم متعدد العملات',
-          description: 'دعم كامل للدينار التونسي واليورو والعملات الأخرى مع تحويل فوري',
+          title: 'إدارة ميزانية واضحة',
+          description: 'حدد حدوداً بسيطة وابقَ مسيطراً على أموالك',
         },
         {
-          title: 'وضع عدم الاتصال',
-          description: 'تتبع نفقاتك حتى بدون إنترنت. المزامنة التلقائية عند الاتصال',
+          title: 'التحكم في الإنفاق',
+          description: 'قلل من الشراء العشوائي عبر التتبع الفوري',
         },
         {
-          title: 'الخصوصية أولاً',
-          description: 'بياناتك المالية تبقى على جهازك. مشفرة وآمنة',
+          title: 'إدارة الديون والفواتير',
+          description: 'تابع مدفوعاتك وقلل الضغط المالي',
+        },
+        {
+          title: 'تتبع سهل',
+          description: 'تتبع مصاريفك بدون تعقيد أو مجهود',
+        },
+        {
+          title: 'تطبيق بسيط وسهل',
+          description: 'واجهة نظيفة وسهلة الاستخدام يومياً',
         },
       ],
     },

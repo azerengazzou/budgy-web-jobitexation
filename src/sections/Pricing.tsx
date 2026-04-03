@@ -1,14 +1,8 @@
 import { Check, Download, Sparkles } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import SectionBackground from '../components/SectionBackground';
 
 export default function Pricing() {
   const { t } = useLanguage();
-
-  const floatingIcons = [
-    { Icon: Sparkles, position: 'top-[20%] left-[5%]', size: 'w-24 h-24' },
-    { Icon: Download, position: 'bottom-[25%] right-[10%]', size: 'w-28 h-28' },
-  ];
 
   const scrollToDownload = () => {
     const element = document.getElementById('download');
@@ -16,8 +10,7 @@ export default function Pricing() {
   };
 
   return (
-    <section id="pricing" className="relative py-20 px-4 overflow-hidden">
-      <SectionBackground icons={floatingIcons} />
+    <section id="pricing" className="relative py-20 px-4 overflow-hidden bg-slate-50">
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
@@ -30,7 +23,7 @@ export default function Pricing() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-white/20 hover:border-white/40 transition-all">
+          <div className="bg-white backdrop-blur-sm rounded-3xl p-8 shadow-lg border-2 border-slate-200 hover:border-slate-300 transition-all">
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-[#0F2854] mb-2">
                 {t.pricing.free.name}

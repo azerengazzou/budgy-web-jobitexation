@@ -51,29 +51,26 @@ export default function PhoneShowcaseNew() {
 
       {/* Phone Mockups */}
       <div className="flex items-center justify-center gap-4 lg:gap-6">
-        <PhoneMockup 
-          src="/phone-budgy.png" 
-          alt="Budgy App" 
+        <PhoneMockup
+          src="/phone-budgy.png"
+          alt="Budgy App"
           size="small"
           rotation={-8}
         />
-        <PhoneMockup 
-          src="/phone-budgy.png" 
-          alt="Budgy App" 
+        <PhoneMockup
+          src="/phone-budgy.png"
+          alt="Budgy App"
           size="large"
           rotation={0}
         />
-        <PhoneMockup 
-          src="/phone-budgy.png" 
-          alt="Budgy App" 
+        <PhoneMockup
+          src="/phone-budgy.png"
+          alt="Budgy App"
           size="small"
           rotation={8}
         />
       </div>
 
-      {/* Table Surface Effect */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] lg:w-[700px] h-2 bg-gradient-to-r from-transparent via-white/20 to-transparent blur-md"></div>
-      <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-[400px] lg:w-[600px] h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent blur-sm"></div>
     </div>
   );
 }

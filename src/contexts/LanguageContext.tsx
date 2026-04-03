@@ -13,11 +13,34 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    setIsLoading(true);
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    // Preload images
+    const imagesToPreload = [
+      '/icon-2.png',
+      '/phone-budgy.png'
+    ];
+
+    const preloadPromises = imagesToPreload.map(src => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = resolve;
+        img.onerror = resolve; // Continue even if image fails
+        img.src = src;
+      });
+    });
+
+    Promise.all(preloadPromises).then(() => {
+      setTimeout(() => {
+        setLanguageState(lang);
+        setIsLoading(false);
+      }, 800);
+    });
   };
 
   const dir = language === 'ar' ? 'rtl' : 'ltr';
@@ -30,7 +53,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   };
 
   if (!language) {
-    return <LanguageSelector onSelect={setLanguage} />;
+    return <LanguageSelector onSelect={setLanguage} isLoading={isLoading} />;
   }
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
@@ -44,21 +67,37 @@ export function useLanguage() {
   return context;
 }
 
-function LanguageSelector({ onSelect }: { onSelect: (lang: Language) => void }) {
+function LanguageSelector({ onSelect, isLoading }: { onSelect: (lang: Language) => void; isLoading: boolean }) {
   const languages = [
     { code: 'en' as Language, name: 'English', flag: '🇬🇧', nativeName: 'English' },
     { code: 'fr' as Language, name: 'French', flag: '🇫🇷', nativeName: 'Français' },
     { code: 'ar' as Language, name: 'Arabic', flag: '🇹🇳', nativeName: 'العربية' },
   ];
 
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
+        <div className="text-center">
+          <div className="inline-block p-4 bg-blue-100 rounded-full mb-6 animate-pulse">
+            <img src="/icon-2.png" alt="Budgy Logo" className="w-16 h-16 object-contain" />
+          </div>
+          <div className="relative w-16 h-16 mx-auto mb-4">
+            <div className="absolute inset-0 border-4 border-blue-200 rounded-full"></div>
+            <div className="absolute inset-0 border-4 border-blue-600 rounded-full border-t-transparent animate-spin"></div>
+          </div>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Loading...</h2>
+          <p className="text-gray-600">Preparing your experience</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         <div className="text-center mb-12">
           <div className="inline-block p-4 bg-blue-100 rounded-full mb-4">
-            <svg className="w-12 h-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9" />
-            </svg>
+            <img src="/icon-2.png" alt="Budgy Logo" className="w-12 h-12 object-contain" />
           </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-3">
             Choose Your Language

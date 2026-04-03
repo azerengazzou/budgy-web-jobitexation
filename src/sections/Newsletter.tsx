@@ -1,17 +1,11 @@
 import { useState } from 'react';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-import SectionBackground from '../components/SectionBackground';
 
 export default function Newsletter() {
   const { t } = useLanguage();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  const floatingIcons = [
-    { Icon: Mail, position: 'top-[20%] left-[10%]', size: 'w-24 h-24' },
-    { Icon: Send, position: 'bottom-[15%] right-[8%]', size: 'w-28 h-28' },
-  ];
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -30,32 +24,31 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="relative py-20 px-4 overflow-hidden">
-      <SectionBackground icons={floatingIcons} />
+    <section className="relative bg-slate-900 text-gray-300 py-12 px-4 border-t border-slate-800 overflow-hidden">
 
       <div className="max-w-4xl mx-auto text-center relative z-10">
-        <div className="inline-block p-4 bg-white/20 rounded-full mb-6">
+        <div className="inline-block p-4 bg-white/10 rounded-full mb-6">
           <Mail className="w-12 h-12 text-white" />
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-[#0F2854] mb-4">
+        <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           {t.newsletter.title}
         </h2>
 
-        <p className="text-xl text-[#1C4D8D] mb-10 max-w-2xl mx-auto">
+        <p className="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
           {t.newsletter.subtitle}
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-xl mx-auto mb-6">
           <div className="flex flex-col sm:flex-row gap-3">
             <div className="flex-1 relative">
-              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+              <Mail className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder={t.newsletter.placeholder}
-                className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-transparent focus:border-blue-400 focus:outline-none text-[#0F2854] text-lg"
+                className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-white/20 focus:border-white focus:outline-none text-slate-900 text-lg bg-white placeholder:text-slate-400"
                 required
               />
             </div>
@@ -83,7 +76,7 @@ export default function Newsletter() {
         )}
 
         {status === 'idle' && (
-          <p className="text-blue-200 text-sm">
+          <p className="text-blue-100 text-sm">
             {t.newsletter.privacy}
           </p>
         )}
